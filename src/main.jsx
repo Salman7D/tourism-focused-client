@@ -12,6 +12,7 @@ import Home from './Components/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
+import { ToastContainer } from 'react-toastify';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <FirebaseProvider>
       <RouterProvider router={router} />
+      <ToastContainer></ToastContainer>
     </FirebaseProvider>
     
   </React.StrictMode>,
