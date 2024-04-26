@@ -1,12 +1,13 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../Firebase/firebaseConfiq";
 
 export const AuthContext = createContext(null)
 
 // social auth providers
-
+const goggleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
 
 
 const FirebaseProvider = ({ children }) => {
@@ -32,6 +33,22 @@ const FirebaseProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
+    // goggle login
+    const googleLogin = () => {
+        return signInWithPopup(auth, goggleProvider);
+    }
+
+    // github login
+    const githubLogin = () => {
+        return signInWithPopup(auth, githubProvider);
+    }
+
+
+    // logout user
+    const logOut = () => {
+        setUser(null)
+        signOut(auth)
+    }
     // observer
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -46,7 +63,10 @@ const FirebaseProvider = ({ children }) => {
         createUser,
         updateUserProfile,
         user,
-        signInUser
+        signInUser,
+        googleLogin,
+        githubLogin,
+        logOut
     }
 
 
