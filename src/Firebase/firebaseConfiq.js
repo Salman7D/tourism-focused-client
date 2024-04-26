@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAF8XdXdJRTBP1-T_4r_sbQT3eQHrq8rHY",
-  authDomain: "tourism-focused-auth.firebaseapp.com",
-  projectId: "tourism-focused-auth",
-  storageBucket: "tourism-focused-auth.appspot.com",
-  messagingSenderId: "616276378215",
-  appId: "1:616276378215:web:d18cf17faa1260ebb48ac2"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID 
 };
 
 // Initialize Firebase
