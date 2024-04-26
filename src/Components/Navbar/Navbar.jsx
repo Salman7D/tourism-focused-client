@@ -16,10 +16,13 @@ const Navbar = () => {
      <li><NavLink className={({isActive}) => 
       isActive ? "border border-solid border-[#687389] rounded-lg text-[#687389]" : "text-lg font-normal"
     } to="/about">About</NavLink></li>
-    {user && <>
+     <li><NavLink className={({isActive}) => 
+      isActive ? "border border-solid border-[#687389] rounded-lg text-[#687389]" : "text-lg font-normal"
+    } to="/contactUs">Contact Us</NavLink></li>
     <li><NavLink className={({isActive}) => 
       isActive ? "border border-solid border-[#687389] rounded-lg text-[#687389]" : "text-lg font-normal"
     } to="/allTouristsSpot">All Tourists Spot</NavLink></li>
+    {user && <>
       <li><NavLink className={({isActive}) => 
       isActive ? "border border-solid border-[#687389] rounded-lg text-[#687389]" : "text-lg font-normal"
     } to="/addTouristsSpot">Add Tourists Spot</NavLink></li>
