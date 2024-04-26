@@ -12,10 +12,13 @@ const githubProvider = new GithubAuthProvider();
 
 const FirebaseProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+
 
 
     // create user
     const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
@@ -30,16 +33,19 @@ const FirebaseProvider = ({ children }) => {
 
     // sign in user
     const signInUser = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     // goggle login
     const googleLogin = () => {
+        setLoading(true)
         return signInWithPopup(auth, goggleProvider);
     }
 
     // github login
     const githubLogin = () => {
+        setLoading(true)
         return signInWithPopup(auth, githubProvider);
     }
 
@@ -55,6 +61,7 @@ const FirebaseProvider = ({ children }) => {
             if(user){
                 setUser(user)
             }
+            setLoading(false)
         });
         return () => unsubscribe();
     },[])
@@ -66,7 +73,8 @@ const FirebaseProvider = ({ children }) => {
         signInUser,
         googleLogin,
         githubLogin,
-        logOut
+        logOut,
+        loading
     }
 
 

@@ -15,6 +15,10 @@ import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 import { ToastContainer } from 'react-toastify';
 import About from './Components/About/About';
 import ContactUs from './Components/ContactUs/ContactUs';
+import AllTouristsSpot from './Components/AllTouristsSpot';
+import AddtouristsSpot from './Components/AddtouristsSpot';
+import MyList from './Components/MyList';
+import PrivateRoutes from './Components/PrivateRoutes/PrivateRoutes';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +45,18 @@ const router = createBrowserRouter([
       {
         path: "/contactUs",
         element: <ContactUs></ContactUs>
+      },
+      {
+        path: "/allTouristsSpot",
+        element: <AllTouristsSpot></AllTouristsSpot>
+      },
+      {
+        path: "/addTouristsSpot",
+        element: <PrivateRoutes><AddtouristsSpot></AddtouristsSpot></PrivateRoutes>
+      },
+      {
+        path: "/myList",
+        element: <PrivateRoutes><MyList></MyList></PrivateRoutes>
       }
     ]
   },
