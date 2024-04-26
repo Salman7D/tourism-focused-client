@@ -1,9 +1,11 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { createUserWithEmailAndPassword, onAuthStateChanged, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import auth from "../Firebase/firebaseConfiq";
 
 export const AuthContext = createContext(null)
+
+// social auth providers
 
 
 
@@ -25,6 +27,11 @@ const FirebaseProvider = ({ children }) => {
 
     }
 
+    // sign in user
+    const signInUser = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+
     // observer
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -38,7 +45,8 @@ const FirebaseProvider = ({ children }) => {
     const allValues = {
         createUser,
         updateUserProfile,
-        user
+        user,
+        signInUser
     }
 
 
