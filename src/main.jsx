@@ -13,6 +13,8 @@ import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 import { ToastContainer } from 'react-toastify';
+import About from './Components/About/About';
+import ContactUs from './Components/ContactUs/ContactUs';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/about",
+        element: <About></About>
+      },
+      {
+        path: "/contactUs",
+        element: <ContactUs></ContactUs>
       }
     ]
   },

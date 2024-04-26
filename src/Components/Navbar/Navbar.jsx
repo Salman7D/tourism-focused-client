@@ -6,12 +6,14 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
 
     const { logOut, user } = useContext(AuthContext);
+
+
     
     const navlinks = <>
     <li><NavLink className={({isActive}) => 
       isActive ? "border border-solid border-[#687389] rounded-lg text-[#687389]" : "text-lg font-normal"
     } to="/">Home</NavLink></li>
-    <li><NavLink className={({isActive}) => 
+     <li><NavLink className={({isActive}) => 
       isActive ? "border border-solid border-[#687389] rounded-lg text-[#687389]" : "text-lg font-normal"
     } to="/about">About</NavLink></li>
     <li><NavLink className={({isActive}) => 
@@ -29,6 +31,8 @@ const Navbar = () => {
 
     }
     </>
+
+
     
     
     
@@ -65,9 +69,15 @@ const Navbar = () => {
                 </div>
               
               :
+              <>
+              <Link to="/register">
+              <button className="border border-[#687389]  rounded-lg text-[#687389] text-lg font-semibold btn btn-ghost">Register</button>
+              </Link>
+
               <Link to="/login">
               <button className="border border-[#687389]  rounded-lg text-[#687389] text-lg font-semibold btn btn-ghost">Login</button>
               </Link>
+              </>
             
     }
         

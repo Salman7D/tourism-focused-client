@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../FirebaseProvider/FirebaseProvider";
 import { useLocation, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 
 const SocialLogin = () => {
@@ -17,7 +17,7 @@ const SocialLogin = () => {
         socialprovider()
         .then(result => {
             if(result.user){
-                toast.success("Successfully Login");
+                // toast.success("Successfully Login");
                 navigate(from);
                 
             }
