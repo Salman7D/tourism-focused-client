@@ -1,24 +1,74 @@
-
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const SpotCard = ({spot}) => {
 
-    const {spot_name, country_Name, location, description, average_cost, seasonality, travel_time, totalVisitors, user_email, user_name, photo} = spot;
+    const {_id, spot_name, country_Name, location, seasonality, photo} = spot;
+
+    const handleDelete = _id => {
+        console.log(_id);
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+            
+
+            fetch(`http://localhost:5000/touristsSpot/${_id}`, {
+                method: "DELETE"
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if(data.deletedCount > 0){
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your Tourists Spot has been deleted.",
+                        icon: "success"
+                           });
+                }
+            })
+            }
+          });
+    }
 
 
 
     return (
         <div className="card card-side bg-base-100 shadow-xl">
-            <figure><img src={photo} alt="Movie" /></figure>
-            <div className="flex justify-between w-full pr-4">
+            <figure><img className="w-32 h-32 p-4 rounded-lg" src={photo} alt="" /></figure>
+            <div className="flex justify-between w-full p-4">
                 <div>
-                    <h2 className="card-title">Name: {name}</h2>
-                    <p></p>
-                    <p></p>
-                    <p></p>
+                    <h2 className="card-title">Country Name: {country_Name}</h2>
+                    <p>Spot_name: {spot_name}</p>
+                    <p>Location: {location}</p>
+                    <p>Seasonality: {seasonality}</p>
+                </div>
+                <div className="card-actions justify-end">
+                    <div className="btn-group btn-group-vertical space-y-4 space-x-2">
+                        <button className="btn">View</button>
+                        <Link to={`updateCoffee/${_id}`}>
+                        <button className="btn">Edit</button>
+                        </Link>
+                        <button
+                            onClick={() => handleDelete(_id)}
+                            className="btn bg-red-500">X</button>
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
+
+SpotCard.propTypes = {
+    spot: PropTypes.object
+}
 
 export default SpotCard;
