@@ -39,7 +39,7 @@ const AddtouristsSpot = () => {
                     title: 'Success!',
                     text: 'Coffee Added Successfully',
                     icon: 'success',
-                    confirmButtonText: 'Cool'
+                    confirmButtonText: 'Okay'
                   })
             }
         })
