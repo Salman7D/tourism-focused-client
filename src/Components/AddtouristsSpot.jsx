@@ -160,7 +160,7 @@ const AddtouristsSpot = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Coffee" className="btn btn-block" />
+                <input type="submit" value="Add Tourists Spot" className="btn btn-block" />
 
             </form>
         </div>

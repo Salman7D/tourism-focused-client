@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const SpotCard = ({spot}) => {
+const SpotCard = ({ spot, spots, setSpots }) => {
 
     const {_id, spot_name, country_Name, location, seasonality, photo} = spot;
 
@@ -33,6 +33,8 @@ const SpotCard = ({spot}) => {
                         text: "Your Tourists Spot has been deleted.",
                         icon: "success"
                            });
+                           const remaining = spots.filter(spt => spt._id !== _id)
+                           setSpots(remaining);
                 }
             })
             }
