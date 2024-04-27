@@ -1,4 +1,4 @@
-
+import Swal from 'sweetalert2'
 
 const AddtouristsSpot = () => {
 
@@ -22,10 +22,28 @@ const AddtouristsSpot = () => {
         const addSpot = {spot_name, country_Name, location, description, average_cost, seasonality, travel_time, totalVisitors, user_email, user_name, photo}
 
         console.log(addSpot);
+
+        // send data to the server
+        fetch("http://localhost:5000/touristsSpot", {
+            method: "POST",
+            headers: {
+                "content-type" : "application/json"
+            },
+            body: JSON.stringify(addSpot)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Coffee Added Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+            }
+        })
     }
-
-
-
 
 
 
