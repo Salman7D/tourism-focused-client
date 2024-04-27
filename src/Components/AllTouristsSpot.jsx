@@ -1,17 +1,17 @@
 import { useLoaderData } from "react-router-dom";
-import SpotCard from "./SpotCard";
+import AllSpotCard from "./AllSpotCard";
 
 
 const AllTouristsSpot = () => {
-  const spots = useLoaderData();
+  const allSpots = useLoaderData();
 
 
     return (
       <div className="m-20">
-      <h2 className="text-6xl text-center my-20 text-purple-600 mb-10">Total Spots: {spots.length}</h2>
+      <h2 className="text-6xl text-center my-20 text-purple-600 mb-10">Total Spots: {allSpots.length}</h2>
       <div className="grid md:grid-cols-2 gap-4">
       {
-          spots.map(spot => <SpotCard key={spot._id} spot={spot}></SpotCard>)
+          allSpots.map(allSpot => <AllSpotCard key={allSpot._id} allSpot={allSpot}></AllSpotCard>)
       }
       </div>
   </div>

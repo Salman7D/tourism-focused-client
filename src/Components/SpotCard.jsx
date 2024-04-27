@@ -55,13 +55,13 @@ const SpotCard = ({ spot, spots, setSpots }) => {
                 </div>
                 <div className="card-actions justify-end">
                     <div className="btn-group btn-group-vertical space-y-4 space-x-2">
-                        <button className="btn">View</button>
+                        
                         <Link to={`/updatedSpot/${_id}`}>
-                        <button className="btn">Edit</button>
+                        <button className="btn btn-accent">Update</button>
                         </Link>
                         <button
                             onClick={() => handleDelete(_id)}
-                            className="btn bg-red-500">X</button>
+                            className="btn bg-red-500">Delete</button>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,9 @@ const SpotCard = ({ spot, spots, setSpots }) => {
 };
 
 SpotCard.propTypes = {
-    spot: PropTypes.object
+    spot: PropTypes.object,
+    spots: PropTypes.object,
+    setSpots: PropTypes.object
 }
 
 export default SpotCard;
