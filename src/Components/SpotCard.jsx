@@ -54,7 +54,7 @@ const SpotCard = ({spot}) => {
                 <div className="card-actions justify-end">
                     <div className="btn-group btn-group-vertical space-y-4 space-x-2">
                         <button className="btn">View</button>
-                        <Link to={`updateCoffee/${_id}`}>
+                        <Link to={`/updatedSpot/${_id}`}>
                         <button className="btn">Edit</button>
                         </Link>
                         <button
