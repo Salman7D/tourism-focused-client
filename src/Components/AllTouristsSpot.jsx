@@ -24,10 +24,6 @@ const AllTouristsSpot = () => {
   });
 
 
-
-
-
-
     return (
 <>
       <div className="dropdown">

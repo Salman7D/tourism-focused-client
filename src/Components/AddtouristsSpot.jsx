@@ -1,8 +1,13 @@
+import { useContext } from 'react';
 import Swal from 'sweetalert2'
+import { AuthContext } from '../FirebaseProvider/FirebaseProvider';
 
 const AddtouristsSpot = () => {
 
+    const { user } = useContext(AuthContext) || {};
+
     const handleAddTouristsSpot = e => {
+
         e.preventDefault();
 
         const form = e.target;
@@ -18,8 +23,9 @@ const AddtouristsSpot = () => {
         const user_email = form.user_email.value;
         const user_name = form.user_name.value;
         const photo = form.photo.value;
+        const email = user.email;
 
-        const addSpot = {spot_name, country_Name, location, description, average_cost, seasonality, travel_time, totalVisitors, user_email, user_name, photo}
+        const addSpot = {email, spot_name, country_Name, location, description, average_cost, seasonality, travel_time, totalVisitors, user_email, user_name, photo}
 
         console.log(addSpot);
 

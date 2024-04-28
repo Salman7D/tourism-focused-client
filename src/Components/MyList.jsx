@@ -1,11 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import SpotCard from "./SpotCard";
-import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
+import { useState } from "react";
+
 
 
 const MyList = () => {
 
+                    
     const loadedSpots = useLoaderData();
     console.log(loadedSpots);
     const [spots, setSpots] = useState(loadedSpots)

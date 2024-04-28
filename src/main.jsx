@@ -21,6 +21,7 @@ import MyList from './Components/MyList';
 import PrivateRoutes from './Components/PrivateRoutes/PrivateRoutes';
 import UpdatedSpot from './Components/UpdatedSpot';
 import Details from './Pages/Details';
+import Others from './Components/Others';
 
 const router = createBrowserRouter([
   {
@@ -61,7 +62,7 @@ const router = createBrowserRouter([
       // {
       //   path: "/myList/:email",
       //   element: <PrivateRoutes><MyList></MyList></PrivateRoutes>,
-      //   loader: ({params}) => fetch(`http://localhost:5000/touristsSpotEmail/${params.email}`)
+      //   loader: ({params}) => fetch(`http://localhost:5000/myAddedLists/${params.email}`)
       // },
       {
         path: "/myList",
@@ -78,7 +79,10 @@ const router = createBrowserRouter([
         element: <PrivateRoutes><Details></Details></PrivateRoutes>,
         loader: ({params}) => fetch(`http://localhost:5000/touristsSpot/${params.id}`)
       },
-
+      {
+        path: "/others",
+        element: <Others></Others>
+      }
       
 
     ]
