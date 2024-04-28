@@ -24,12 +24,12 @@ const Others = () => {
     return (
         <div>
             {
-                item?.map(p => {
-                    <div>
+                item?.map(p => (
+                    <div key={p._id}>
                         <h1>{p.spot_name}</h1>
                         <h1>{p.average_cost}</h1>
                     </div>
-                })
+                ))
             }
         </div>
     );

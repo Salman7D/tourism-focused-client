@@ -7,7 +7,7 @@ const HSCard = ({ spot }) => {
    
     return (
         <div>
-            <div className="card w-96 bg-[#dbdee2] shadow-xl ml-5 mb-10 lg:ml-10">
+            <div className="card w-96 bg-[#dbdee2] shadow-xl ml-0 mb-10 lg:ml-10">
     <figure><img className="lg:h-[200px] lg:w-[320px] mt-5 h-[200px] w-[320px] rounded-xl lg:mt-5" src={photo} alt="" /></figure>
     
     <div className="card-body">

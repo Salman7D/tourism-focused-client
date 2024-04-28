@@ -26,16 +26,16 @@ const AllTouristsSpot = () => {
 
     return (
 <>
-      <div className="dropdown">
-  <div tabIndex={0} role="button" className="btn m-1">Sort</div>
+      <div className="dropdown ml-[180px] md:ml-[350px] mt-10 lg:ml-[700px]">
+  <div tabIndex={0} role="button" className="btn m-1">Sort by</div>
   <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a onClick={toggleSortOrder}>Average Cost</a></li>
   </ul>
 </div>
 
       <div className="m-20">
-      <h2 className="text-6xl text-center my-20 text-purple-600 mb-10">Total Spots: {allSpots.length}</h2>
-      <div className="grid md:grid-cols-2 gap-4">
+      <h2 className="text-6xl text-center my-20 text-[#687389] mb-10">Total Spots: {allSpots.length}</h2>
+      <div className="lg:grid lg:grid-cols-2 lg:gap-10 md:ml-40 lg:ml-40 lg:mt-10 lg:mb-10">
       {
           sortedSpots.map(allSpot => <AllSpotCard key={allSpot._id} allSpot={allSpot}></AllSpotCard>)
       }
