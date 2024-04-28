@@ -1,7 +1,9 @@
 import { Helmet } from "react-helmet";
+import HomeSpot from "../HomeSpot";
 
 
 const Home = () => {
+
     return (
         <div>
             <Helmet>
@@ -9,6 +11,11 @@ const Home = () => {
                 <title>Home - Skyline Residence</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
+
+            <HomeSpot></HomeSpot>
+            
+            
+            
         </div>
     );
 };
