@@ -4,7 +4,12 @@ import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
-  const [theme, setTheme] = useState("light")
+  // const [theme, setTheme] = useState("light")
+
+  const [theme, setTheme] = useState(() => {
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme !== null ? storedTheme : "light";
+  });
 
   const handleToggle = e => {
     if(e.target.checked){
