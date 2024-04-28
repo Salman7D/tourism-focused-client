@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import HomeSpot from "../HomeSpot";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from "react-simple-typewriter";
+import Slider from "../Slider/Slider";
 
 
 const Home = () => {
@@ -14,6 +15,8 @@ const Home = () => {
                 <title>Home - Skyline Residence</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
+
+            <Slider></Slider>
             
             <Fade direction="down">
                 <h1>Welcome to my world</h1>
