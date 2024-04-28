@@ -28,7 +28,7 @@ const Home = () => {
                 >
                 <Typewriter
                 words={['Awesome', 'Cool', 'Peace', 'Fantasy']}
-                loop={5}
+                loop={false}
                 cursor
                 cursorStyle='_'
                 typeSpeed={70}

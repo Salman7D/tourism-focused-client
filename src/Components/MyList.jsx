@@ -7,6 +7,7 @@ import { Fade } from "react-awesome-reveal";
 const MyList = () => {
 
     const loadedSpots = useLoaderData();
+    console.log(loadedSpots);
     const [spots, setSpots] = useState(loadedSpots)
 
     return (

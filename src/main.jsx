@@ -58,6 +58,11 @@ const router = createBrowserRouter([
         path: "/addTouristsSpot",
         element: <PrivateRoutes><AddtouristsSpot></AddtouristsSpot></PrivateRoutes>
       },
+      // {
+      //   path: "/myList/:email",
+      //   element: <PrivateRoutes><MyList></MyList></PrivateRoutes>,
+      //   loader: ({params}) => fetch(`http://localhost:5000/touristsSpotEmail/${params.email}`)
+      // },
       {
         path: "/myList",
         element: <PrivateRoutes><MyList></MyList></PrivateRoutes>,
@@ -73,7 +78,7 @@ const router = createBrowserRouter([
         element: <PrivateRoutes><Details></Details></PrivateRoutes>,
         loader: ({params}) => fetch(`http://localhost:5000/touristsSpot/${params.id}`)
       },
-      
+
       
 
     ]
