@@ -8,6 +8,7 @@ import { AuthContext } from "../FirebaseProvider/FirebaseProvider";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 
 const MyList = () => {
@@ -79,6 +80,13 @@ const MyList = () => {
            
         //     </div>
         // </div>
+
+        <>
+         <Helmet>
+                <meta charSet="utf-8" />
+                <title>My list - Trip Advisor</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         <Fade direction="up">
             <div>
             <div className="lg:p-10 p-5">
@@ -115,7 +123,7 @@ const MyList = () => {
         </div>
         </div>
         </Fade>
-        
+        </>
     );
 };
 

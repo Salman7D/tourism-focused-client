@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import AllSpotCard from "./AllSpotCard";
 import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 
 const AllTouristsSpot = () => {
@@ -27,6 +28,12 @@ const AllTouristsSpot = () => {
 
     return (
 <>
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>All Tourists Spot - Trip Advisor</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
       <div className="dropdown ml-[180px] md:ml-[350px] mt-10 lg:ml-[700px]">
   <div tabIndex={0} role="button" className="btn m-1">Sort by</div>
   <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">

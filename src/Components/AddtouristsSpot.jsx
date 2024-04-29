@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { AuthContext } from '../FirebaseProvider/FirebaseProvider';
+import { Helmet } from 'react-helmet';
 
 const AddtouristsSpot = () => {
 
@@ -55,6 +56,12 @@ const AddtouristsSpot = () => {
 
 
     return (
+<>
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>Add Tourists Spot - Trip Advisor</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         <div className="bg-[#dbdee2] mt-10 lg:mt-0 p-24 lg:mb-10 mb-10">
             <h2 className="text-3xl font-extrabold">Add a Tourist Spot</h2>
             <form onSubmit={handleAddTouristsSpot}>
@@ -170,6 +177,7 @@ const AddtouristsSpot = () => {
 
             </form>
         </div>
+        </>
     );
 };
 

@@ -14,7 +14,7 @@ const Home = () => {
         <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Home - Skyline Residence</title>
+                <title>Home - Trip Advisor</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
 

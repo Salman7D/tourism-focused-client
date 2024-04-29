@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -59,7 +60,12 @@ const ProductsDetails = () => {
 
 
     return (
-
+        <>
+        <Helmet>
+        <meta charSet="utf-8" />
+        <title>Update Details - Trip Advisor</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
         <div className="bg-[#dbdee2] lg:mt-0 mt-10 p-24 mb-10">
             <h2 className="text-3xl font-extrabold">Updated a Tourist Spot</h2>
             <form onSubmit={handleUpdate}>
@@ -157,6 +163,7 @@ const ProductsDetails = () => {
 
             </form>
         </div>
+        </>
     );
 };
 
