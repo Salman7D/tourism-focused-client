@@ -6,6 +6,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../FirebaseProvider/FirebaseProvider";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const MyList = () => {
@@ -96,8 +97,10 @@ const MyList = () => {
                 <div className="card-actions justify-end">
                     <div className="btn-group btn-group-vertical space-y-4 space-x-2">
                         
-                        
+                        <Link to={`/products/${p._id}`}>
                         <button className="btn btn-accent">Update</button>
+                        </Link>
+                        
                         
                         <button onClick={() => handleDelete(p._id)}
                             className="btn bg-red-500">Delete</button>

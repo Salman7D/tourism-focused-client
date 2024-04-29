@@ -22,6 +22,7 @@ import PrivateRoutes from './Components/PrivateRoutes/PrivateRoutes';
 import UpdatedSpot from './Components/UpdatedSpot';
 import Details from './Pages/Details';
 import Others from './Components/Others';
+import ProductsDetails from './Pages/ProductsDetails';
 
 const router = createBrowserRouter([
   {
@@ -82,6 +83,10 @@ const router = createBrowserRouter([
       {
         path: "/others",
         element: <Others></Others>
+      },
+      {
+        path: "/products/:id",
+        element: <PrivateRoutes><ProductsDetails></ProductsDetails></PrivateRoutes>
       }
       
 
