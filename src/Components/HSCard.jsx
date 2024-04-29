@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const HSCard = ({ spot }) => {
 
-    const {_id, spot_name, average_cost, photo, totalVisitors, travel_time, seasonality} = spot;
+    const {_id, country_Name, location, photo, average_cost, travel_time, seasonality} = spot;
    
     return (
         <div>
@@ -11,16 +11,16 @@ const HSCard = ({ spot }) => {
     <figure><img className="lg:h-[200px] lg:w-[320px] mt-5 h-[200px] w-[320px] rounded-xl lg:mt-5" src={photo} alt="" /></figure>
     
     <div className="card-body">
-        <h1><span className="font-bold"># </span>{spot_name}</h1>
-        <h2 className="card-title">{average_cost}</h2>
+        <h1 className="font-medium text-xl">country_name: <span className="font-bold text-xl">{country_Name}</span></h1>
+        <h2 className="card-title">Location: <span className="font-bold text-xl">{location}</span> </h2>
         <div className="flex justify-between lg:gap-3">
           
-           <p><span className="font-bold">Price:</span>  {totalVisitors}</p>  
+           <p><span className="font-bold">Average_Cost: </span>  {average_cost}</p>  
         </div>
 
-        <div className="flex justify-between">
-           <p><span className="font-bold">Status:</span> {travel_time}</p>
-           <p><span className="font-bold">Area:</span>  {seasonality}</p>  
+        <div className="flex justify-between lg:gap-2">
+           <p><span className="font-bold">Travel_time: </span> {travel_time}</p>
+           <p><span className="font-bold">Seasonality: </span>  {seasonality}</p>  
         </div>
 
 

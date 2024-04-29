@@ -98,10 +98,10 @@ const MyList = () => {
             <figure><img className="w-32 h-32 p-4 rounded-lg" src={p.photo} alt="" /></figure>
             <div className="flex justify-between w-full p-4">
                 <div>
-                    <h2 className="card-title">Country Name: {p.country_Name}</h2>
-                    <p>Spot_name: {p.spot_name}</p>
-                    <p>Location: {p.location}</p>
-                    <p>Seasonality: {p.seasonality}</p>
+                    <h2 className="card-title">Country Name:<span className="font-bold text-xl">{p.country_Name}</span> </h2>
+                    <p><span className="font-bold">Spot_name:</span>  {p.spot_name}</p>
+                    <p><span className="font-bold">Location: </span> {p.location}</p>
+                    <p><span className="font-bold">Seasonality: </span> {p.seasonality}</p>
                 </div>
                 <div className="card-actions justify-end">
                     <div className="btn-group btn-group-vertical space-y-4 space-x-2">

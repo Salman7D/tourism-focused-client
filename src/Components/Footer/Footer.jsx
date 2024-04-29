@@ -8,20 +8,20 @@ const Footer = () => {
         <div>
             <footer className="footer p-10 md:overflow-hidden bg-[#232733]">
   <nav>
-    <h6 className="footer-title text-white">## Skyline Residence</h6> 
-    <p className=" lg:w-72 text-white lg:mb-5 mb-5 md:mb-12">At Skyline Residence, we pride ourselves on offering unparalleled luxury living with breathtaking views of the cityscape. Our website serves as a virtual gateway, inviting you to explore the sophistication and elegance that define our residence.</p>
-    <a className="link link-hover text-white flex lg:gap-1 gap-1"><ImLocation></ImLocation> 95 South Park Avenue, USA</a>
+    <h6 className="footer-title text-white">## Trip Advisor</h6> 
+    <p className=" lg:w-72 text-white lg:mb-5 mb-5 md:mb-12">At Trip Advisor, we pride ourselves on offering unparalleled enjoyable traveling with breathtaking views of the cityscape. Our website serves as a virtual gateway, inviting you to explore the sophistication and elegance that define our tourism world.</p>
+    <a className="link link-hover text-white flex lg:gap-1 gap-1"><ImLocation></ImLocation> 95 South Park Avenue, Thailand</a>
     <a className="link link-hover text-white flex lg:gap-1 gap-1"><IoCall></IoCall> +456 875 369 208</a>
-    <a className="link link-hover text-white flex lg:gap-1 gap-1"><MdEmail></MdEmail> support@skylineresidence.com</a>
+    <a className="link link-hover text-white flex lg:gap-1 gap-1"><MdEmail></MdEmail> support@tripadvisor.com</a>
   </nav> 
   <nav>
     <h6 className="footer-title text-white">Navigation</h6> 
     <div className="flex justify-center lg:gap-5 gap-5">
         <div>
-        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Home One</p>
-        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Properties Right</p>
-        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Properties List</p>
-        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Properties Details</p>
+        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Trip One</p>
+        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Spots Right</p>
+        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Spots List</p>
+        <p className="link link-hover lg:mb-2 md:mb-2 text-white">Spots Details</p>
         <p className="link link-hover lg:mb-2 md:mb-2 text-white">Agents Listing</p>
     
         </div>

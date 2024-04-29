@@ -11,7 +11,7 @@ const WhyChooseUs = () => {
             <p className="text-center text-[#687389] font-bold text-xl lg:p-5 lg:mb-10 mb-10">Find your next travel adventure and make it memorable. Explore wildlife, enjoy seaside or book a cruise tour. Check out our popular destinations.
             </p>
 
-            <div className="lg:flex gap-1 flex justify-center justify-evenly mb-10 lg:mb-10">
+            <div className="lg:flex gap-1 flex justify-evenly mb-10 lg:mb-10">
                 <div className="hover:scale-110 duration-500 transition-transform inline-block overflow-hidden lg:p-5 p-1 border border-solid border-[#8e9cb8] rounded-xl lg:h-[170px] lg:w-[170px]">
                     <ImAirplane className="ml-10 lg:ml-3 lg:mb-5 lg:h-[100px] lg:w-[100px]"></ImAirplane>
                     <p className="text-center font-bold">Self-Guided</p>

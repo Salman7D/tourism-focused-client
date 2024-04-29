@@ -2,6 +2,8 @@
 
 Welcome to My Awesome Website! This is a brief overview of its features and functionalities.
 
+My selected category's name is Southeast Asia
+
 ## Live Link
 [Visit My Awesome Website](https://www.example.com)
 

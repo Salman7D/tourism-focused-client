@@ -12,7 +12,7 @@ const Details = () => {
         <div>
         <Helmet>
                 <meta charSet="utf-8" />
-                <title>Details - Skyline Residence</title>
+                <title>Details - Trip Advisor</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
         <div className="lg:ml-[100px] lg:mb-10">
@@ -24,7 +24,7 @@ const Details = () => {
                 <p className="text-lg font-medium flex lg:gap-2 lg:mb-3"><ImLocation2 className="lg:h-[24px] lg:w-[24px]"></ImLocation2>{location}</p>
                 </div>
                 <div>
-                <p className="lg:p-3 p-3 text-[#687389] text-lg font-semibold">{average_cost}</p>
+                <p className="lg:p-3 p-3 text-[#687389] text-lg font-semibold">Average_Cost: {average_cost}</p>
                 </div>
             </div>
  
@@ -33,7 +33,7 @@ const Details = () => {
                 </div>
 
             <div className="bg-[#F5F7FB] rounded-xl lg:mt-10 mt-5 p-3 lg:p-3">
-                <h2 className="text-lg font-medium">Description</h2>
+                <h2 className="text-lg font-medium">Short Description</h2>
                 <div className="bg-[#687389] lg:w-10 lg:h-1 mb-3 lg:mb-5">
  
                 </div>
@@ -41,17 +41,17 @@ const Details = () => {
             </div>
 
             <div className="bg-[#F5F7FB] lg:mb-0 mb-5 lg:mt-10 mt-5 p-3 lg:p-3 rounded-xl">
-                <h2 className="text-lg font-medium">Property Details</h2>
+                <h2 className="text-lg font-medium">Spot Details</h2>
                 <div className="bg-[#687389] rounded-xl lg:w-10 lg:h-1 mb-5 lg:mb-5">
 
                 </div>
 
                 <div className="flex justify-center lg:gap-3 gap-5">
-                    <p> <span className="font-bold">Status:</span>  {seasonality}</p>
-                    <p><span className="font-bold">Area:</span>  {travel_time}</p>
+                    <p> <span className="font-bold">Seasonality:</span>  {seasonality}</p>
+                    <p><span className="font-bold">Travel_Time:</span>  {travel_time}</p>
                     </div>
                     <div className="text-center lg:mt-10 mt-5">
-                    <p className='mb-1 text-[#282828] text-lg font-medium'><span className="font-bold"> Facilities:</span> {totalVisitors}</p>
+                    <p className='mb-1 text-[#282828] text-lg font-medium'><span className="font-bold"> TotalVisitors:</span> {totalVisitors}</p>
                      
                     </div>
                     
