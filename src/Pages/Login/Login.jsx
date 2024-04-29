@@ -2,10 +2,10 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-// import { toast } from "react-toastify";
 import { Helmet } from "react-helmet";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import SocialLogin from "../SocialLogin";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
@@ -29,14 +29,23 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                if(result.user){
-                // toast.success("Successfully Login");
+                Swal.fire({
+                  title: 'Success!',
+                  text: 'User Logged in Successfully',
+                  icon: 'success',
+                  confirmButtonText: 'Okay'
+                })
                 navigate(from);
                 
                }
         })
-            .catch(error => {
-              // toast.error("Invalid Email or Password")
-              console.log(error.message);
+            .catch(() => {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Invalid Email or Password",
+              });
+              
             })
         
         

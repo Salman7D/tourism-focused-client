@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import AllSpotCard from "./AllSpotCard";
 import { useState } from "react";
+import { Fade } from "react-awesome-reveal";
 
 
 const AllTouristsSpot = () => {
@@ -32,15 +33,17 @@ const AllTouristsSpot = () => {
     <li><a onClick={toggleSortOrder}>Average Cost</a></li>
   </ul>
 </div>
-
-      <div className="m-20">
-      <h2 className="text-6xl text-center my-20 text-[#687389] mb-10">Total Spots: {allSpots.length}</h2>
-      <div className="lg:grid lg:grid-cols-2 lg:gap-10 md:ml-40 lg:ml-40 lg:mt-10 lg:mb-10">
-      {
-          sortedSpots.map(allSpot => <AllSpotCard key={allSpot._id} allSpot={allSpot}></AllSpotCard>)
-      }
+      <Fade direction="left">
+          <div className="m-20">
+          <h2 className="text-6xl text-center my-20 text-[#687389] mb-10">Total Spots: {allSpots.length}</h2>
+          <div className="lg:grid lg:grid-cols-2 lg:gap-10 md:ml-40 lg:ml-40 lg:mt-10 lg:mb-10">
+          {
+              sortedSpots.map(allSpot => <AllSpotCard key={allSpot._id} allSpot={allSpot}></AllSpotCard>)
+          }
+          </div>
       </div>
-  </div>
+      </Fade>
+      
   </>
     );
 };

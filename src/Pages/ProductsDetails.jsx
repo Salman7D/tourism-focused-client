@@ -60,8 +60,8 @@ const ProductsDetails = () => {
 
     return (
 
-        <div className="bg-[#F4F3F0] p-24 mb-10">
-            <h2 className="text-3xl font-extrabold">Updated a Tourist Spot: {product.spot_name}</h2>
+        <div className="bg-[#dbdee2] p-24 mb-10">
+            <h2 className="text-3xl font-extrabold">Updated a Tourist Spot</h2>
             <form onSubmit={handleUpdate}>
                 {/* form name and quantity row */}
                 <div className="md:flex mb-8">

@@ -12,7 +12,6 @@ import Home from './Components/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
-import { ToastContainer } from 'react-toastify';
 import About from './Components/About/About';
 import ContactUs from './Components/ContactUs/ContactUs';
 import AllTouristsSpot from './Components/AllTouristsSpot';
@@ -98,8 +97,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <FirebaseProvider>
       <RouterProvider router={router} />
-      <ToastContainer></ToastContainer>
     </FirebaseProvider>
-    
   </React.StrictMode>,
 )

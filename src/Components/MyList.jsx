@@ -7,6 +7,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../FirebaseProvider/FirebaseProvider";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
 
 
 const MyList = () => {
@@ -78,14 +79,14 @@ const MyList = () => {
            
         //     </div>
         // </div>
-
-        <div>
+        <Fade direction="up">
             <div>
+            <div className="lg:p-10">
             {
                 item?.map(p => (
                     <div key={p._id}>
-                        
-                        <div className="card card-side bg-base-100 shadow-xl">
+
+                        <div className="card card-side bg-[#dbdee2] shadow-xl lg:mb-10 lg:mt-10">
             <figure><img className="w-32 h-32 p-4 rounded-lg" src={p.photo} alt="" /></figure>
             <div className="flex justify-between w-full p-4">
                 <div>
@@ -113,6 +114,8 @@ const MyList = () => {
             }
         </div>
         </div>
+        </Fade>
+        
     );
 };
 

@@ -20,9 +20,9 @@ const Home = () => {
             <Slider></Slider>
             
             <Fade direction="down">
-                <h1>Welcome to my world</h1>
+                <h1 className="text-center lg:mt-24 text-5xl font-bold">Welcome to our Tourism world</h1>
             </Fade>
-            <div className="lg:ml-[600px] ml-[80px] md:ml-[230px] text-2xl font-bold">
+            <div className="lg:ml-[600px] ml-[80px] md:ml-[230px] text-3xl font-bold">
             <h1 style={{margin: "50px"}}>
                 Tour is {" "}
                 <span style={{fontWeight: "bold,", color: "green"}}
@@ -49,9 +49,14 @@ const Home = () => {
                 </h1>
             </div>
             
-
-            <HomeSpot></HomeSpot>
-            <PopularPLaces></PopularPLaces>
+            <Fade direction="right">
+                <HomeSpot></HomeSpot>
+            </Fade>
+            
+            <Fade direction="up">
+                <PopularPLaces></PopularPLaces>
+            </Fade>
+            
 
 
 

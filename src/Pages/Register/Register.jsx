@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet";
-import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 
 const Register = () => {
@@ -29,11 +29,16 @@ const Register = () => {
         // create user update and profile
         createUser(email, password)
             .then(() => {
-              toast.success("Successfully create an account");
+              
               navigate(from);
               updateUserProfile(name, image)
                 .then(() => {
-                  
+                  Swal.fire({
+                    title: 'Success!',
+                    text: 'User Register Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Okay'
+                  })
                     // setUser(user);
                   // navigate(from);
                     
@@ -42,7 +47,11 @@ const Register = () => {
                 
         })
               .catch(error => {
-                toast.error("User Already Exists");
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops...",
+                  text: "User Already Exist",
+                });
                 console.log(error.message);
               })
         

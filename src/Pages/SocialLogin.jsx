@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../FirebaseProvider/FirebaseProvider";
 import { useLocation, useNavigate } from "react-router-dom";
-// import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 
 const SocialLogin = () => {
@@ -17,7 +17,12 @@ const SocialLogin = () => {
         socialprovider()
         .then(result => {
             if(result.user){
-                // toast.success("Successfully Login");
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'User Logged in Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Okay'
+                  })
                 navigate(from);
                 
             }
