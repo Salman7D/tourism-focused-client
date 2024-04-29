@@ -4,6 +4,7 @@ import { Fade } from "react-awesome-reveal";
 import { Typewriter } from "react-simple-typewriter";
 import Slider from "../Slider/Slider";
 import PopularPLaces from "./PopularPLaces";
+import WhyChooseUs from "../WhyChooseUs";
 
 
 const Home = () => {
@@ -58,7 +59,7 @@ const Home = () => {
             </Fade>
             
 
-
+            <WhyChooseUs></WhyChooseUs>
 
 
             

@@ -71,7 +71,7 @@ const Slider = () => {
             <SwiperSlide className='lg:mt-0 mt-16'><div className="text-center rounded-xl bg-no-repeat bg-[url(/src/assets/Images/kualalampur.png)] lg:mb-[50px] lg:ml-[110px] md:w-[745px] lg:w-[1320px] lg:h-[600px] w-[400px] h-[500px] lg:p-0 p-2 ml-3 flex items-center justify-center">
             <div>
                 <p data-aos="fade-left" data-aos-duration="3000" className='mb-6 text-[#FFF] text-5xl font-bold mt-10'>Malaysia  </p>
-                <p data-aos="fade-right" data-aos-duration="3000" className='mb-10 text-[#FFF] text-lg font-normal'>: Kuala Lumpur</p>
+                <p data-aos="fade-right" data-aos-duration="3000" className='mb-10 text-[#FFF] text-lg font-normal'>Kuala Lumpur</p>
                 </div>
            
                 
