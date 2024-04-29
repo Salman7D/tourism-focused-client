@@ -34,9 +34,9 @@ const AllTouristsSpot = () => {
   </ul>
 </div>
       <Fade direction="left">
-          <div className="m-20">
+          <div>
           <h2 className="text-6xl text-center my-20 text-[#687389] mb-10">Total Spots: {allSpots.length}</h2>
-          <div className="lg:grid lg:grid-cols-2 lg:gap-10 md:ml-40 lg:ml-40 lg:mt-10 lg:mb-10">
+          <div className="lg:grid lg:grid-cols-2 md:ml-[180px] lg:ml-[180px]">
           {
               sortedSpots.map(allSpot => <AllSpotCard key={allSpot._id} allSpot={allSpot}></AllSpotCard>)
           }

@@ -81,12 +81,12 @@ const MyList = () => {
         // </div>
         <Fade direction="up">
             <div>
-            <div className="lg:p-10">
+            <div className="lg:p-10 p-5">
             {
                 item?.map(p => (
                     <div key={p._id}>
 
-                        <div className="card card-side bg-[#dbdee2] shadow-xl lg:mb-10 lg:mt-10">
+                        <div className="card card-side bg-[#dbdee2] shadow-xl lg:mb-10 mb-10 lg:mt-10 mt-20">
             <figure><img className="w-32 h-32 p-4 rounded-lg" src={p.photo} alt="" /></figure>
             <div className="flex justify-between w-full p-4">
                 <div>

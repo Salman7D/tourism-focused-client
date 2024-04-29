@@ -60,7 +60,7 @@ const ProductsDetails = () => {
 
     return (
 
-        <div className="bg-[#dbdee2] p-24 mb-10">
+        <div className="bg-[#dbdee2] lg:mt-0 mt-10 p-24 mb-10">
             <h2 className="text-3xl font-extrabold">Updated a Tourist Spot</h2>
             <form onSubmit={handleUpdate}>
                 {/* form name and quantity row */}
@@ -89,7 +89,7 @@ const ProductsDetails = () => {
                             <span className="label-text">Location</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="location" defaultValue={location} placeholder="Location" className="input input-bordered w-full" />
+                            <input type="text" name="location" defaultValue={product.location} placeholder="Location" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 ml-4">

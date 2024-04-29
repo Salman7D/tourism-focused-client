@@ -12,7 +12,7 @@ const PopularPLaces = () => {
                     <p className="text-[#687389] text-2xl font-bold">PLACES</p>
                 </div>
             </div>
-        <div className="ml-16  lg:mb-10 lg:ml-24 lg:mr-24 lg:flex justify-between">
+        <div className="ml-16 md:ml-[230px] mb-10 md:mb-10 lg:mb-10 lg:ml-24 lg:mr-24 lg:flex justify-between">
             <div className="bg-[url(/src/assets/Images/bankok.png)] h-[300px] mb-10 w-[300px] lg:h-[300px] lg:w-[300px]">
             <p className="text-white text-2xl font-bold lg:mt-32 text-center">Kualalampur</p>
             </div>

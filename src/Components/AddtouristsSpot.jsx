@@ -55,7 +55,7 @@ const AddtouristsSpot = () => {
 
 
     return (
-        <div className="bg-[#dbdee2] p-24 mb-10">
+        <div className="bg-[#dbdee2] mt-10 lg:mt-0 p-24 lg:mb-10 mb-10">
             <h2 className="text-3xl font-extrabold">Add a Tourist Spot</h2>
             <form onSubmit={handleAddTouristsSpot}>
                 {/* form name and quantity row */}
