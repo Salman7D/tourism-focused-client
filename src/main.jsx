@@ -12,15 +12,12 @@ import Home from './Components/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
-import About from './Components/About/About';
-import ContactUs from './Components/ContactUs/ContactUs';
 import AllTouristsSpot from './Components/AllTouristsSpot';
 import AddtouristsSpot from './Components/AddtouristsSpot';
 import MyList from './Components/MyList';
 import PrivateRoutes from './Components/PrivateRoutes/PrivateRoutes';
 import UpdatedSpot from './Components/UpdatedSpot';
 import Details from './Pages/Details';
-import Others from './Components/Others';
 import ProductsDetails from './Pages/ProductsDetails';
 
 const router = createBrowserRouter([
@@ -41,14 +38,6 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
-      },
-      {
-        path: "/about",
-        element: <About></About>
-      },
-      {
-        path: "/contactUs",
-        element: <ContactUs></ContactUs>
       },
       {
         path: "/allTouristsSpot",
@@ -78,10 +67,6 @@ const router = createBrowserRouter([
         path: "/allSpot/:id",
         element: <PrivateRoutes><Details></Details></PrivateRoutes>,
         loader: ({params}) => fetch(`http://localhost:5000/touristsSpot/${params.id}`)
-      },
-      {
-        path: "/others",
-        element: <Others></Others>
       },
       {
         path: "/products/:id",
