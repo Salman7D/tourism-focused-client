@@ -61,12 +61,12 @@ const router = createBrowserRouter([
       {
         path: "/updatedSpot/:id",
         element: <PrivateRoutes><UpdatedSpot></UpdatedSpot></PrivateRoutes>,
-        loader: ({params}) => fetch(`https://tourism-focused-server.vercel.app/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-focused-server.vercel.app/touristsSpot/${params.id}`)
       },
       {
         path: "/allSpot/:id",
         element: <PrivateRoutes><Details></Details></PrivateRoutes>,
-        loader: ({params}) => fetch(`https://tourism-focused-server.vercel.app/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-focused-server.vercel.app/touristsSpot/${params.id}`)
       },
       {
         path: "/products/:id",
