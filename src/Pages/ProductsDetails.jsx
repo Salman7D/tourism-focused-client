@@ -11,7 +11,7 @@ const ProductsDetails = () => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleProduct/${id}`)
+        fetch(`https://tourism-focused-server-d7mk32w8c-salman-rayhans-projects.vercel.app/singleProduct/${id}`)
         .then(res => res.json())
         .then(data => {
             setProduct(data);
@@ -36,7 +36,7 @@ const ProductsDetails = () => {
 
         const info = {spot_name, country_Name, location, description, average_cost, seasonality, travel_time,totalVisitors,photo}
 
-        fetch(`http://localhost:5000/updateProduct/${id}`, {
+        fetch(`https://tourism-focused-server-d7mk32w8c-salman-rayhans-projects.vercel.app/updateProduct/${id}`, {
             method: "PUT",
             headers: {
                 "content-type" : "application/json"

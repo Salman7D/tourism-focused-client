@@ -21,7 +21,7 @@ const SpotCard = ({ spot, spots, setSpots }) => {
             if (result.isConfirmed) {
             
 
-            fetch(`http://localhost:5000/touristsSpot/${_id}`, {
+            fetch(`https://tourism-focused-server-d7mk32w8c-salman-rayhans-projects.vercel.app/touristsSpot/${_id}`, {
                 method: "DELETE"
             })
             .then(res => res.json())
