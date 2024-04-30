@@ -29,7 +29,7 @@ const UpdatedSpot = () => {
         console.log(UpdatedSpot);
 
         // send data to the server
-        fetch(`https://tourism-focused-server-d7mk32w8c-salman-rayhans-projects.vercel.app/touristsSpot/${_id}`, {
+        fetch(`https://tourism-focused-server.vercel.app/touristsSpot/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type" : "application/json"

@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/touristsSpot")
+        loader: () => fetch("https://tourism-focused-server.vercel.app/touristsSpot")
       },
       {
         path: "/login",
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       {
         path: "/allTouristsSpot",
         element: <AllTouristsSpot></AllTouristsSpot>,
-        loader: () => fetch("http://localhost:5000/touristsSpot")
+        loader: () => fetch("https://tourism-focused-server.vercel.app/touristsSpot")
       },
       {
         path: "/addTouristsSpot",
@@ -61,12 +61,12 @@ const router = createBrowserRouter([
       {
         path: "/updatedSpot/:id",
         element: <PrivateRoutes><UpdatedSpot></UpdatedSpot></PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:5000/touristsSpot/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-focused-server.vercel.app/${params.id}`)
       },
       {
         path: "/allSpot/:id",
         element: <PrivateRoutes><Details></Details></PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:5000/touristsSpot/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-focused-server.vercel.app/${params.id}`)
       },
       {
         path: "/products/:id",

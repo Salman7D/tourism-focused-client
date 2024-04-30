@@ -25,7 +25,7 @@ const MyList = () => {
 
     useEffect(() => {
 
-        fetch(`https://tourism-focused-server-d7mk32w8c-salman-rayhans-projects.vercel.app/myProduct/${user?.email}`)
+        fetch(`https://tourism-focused-server.vercel.app/myProduct/${user?.email}`)
         .then(res => res.json())
         .then(data => {
             setItem(data);
@@ -47,7 +47,7 @@ const MyList = () => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/delete/${id}`, {
+                fetch(`https://tourism-focused-server.vercel.app/delete/${id}`, {
             method: "DELETE",
 
         })

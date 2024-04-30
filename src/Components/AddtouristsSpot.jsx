@@ -31,7 +31,7 @@ const AddtouristsSpot = () => {
         console.log(addSpot);
 
         // send data to the server
-        fetch("https://tourism-focused-server-d7mk32w8c-salman-rayhans-projects.vercel.app/touristsSpot", {
+        fetch("https://tourism-focused-server.vercel.app/touristsSpot", {
             method: "POST",
             headers: {
                 "content-type" : "application/json"
